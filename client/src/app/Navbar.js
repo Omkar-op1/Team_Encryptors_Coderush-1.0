@@ -7,20 +7,7 @@ export default function Navbar() {
       {/* Left: Logo + Name */}
       <div className="flex items-center space-x-3">
         <div className="bg-blue-600 text-white rounded-full p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 12h6m2 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope h-6 w-6 text-primary-foreground" aria-hidden="true"><path d="M11 2v2"></path><path d="M5 2v2"></path><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"></path><path d="M8 15a6 6 0 0 0 12 0v-3"></path><circle cx="20" cy="10" r="2"></circle></svg>
         </div>
         <div>
           <h1 className="font-bold text-lg text-gray-800">HealthAssist AI</h1>
