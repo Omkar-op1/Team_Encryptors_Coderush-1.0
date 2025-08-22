@@ -17,7 +17,7 @@ export default function AashaLogin() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (form.email && form.password) {
-      router.push("/dashboard"); // redirect after successful login
+      router.push("/aasha/dashboard"); // redirect after successful login
     }
   };
 

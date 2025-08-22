@@ -1,0 +1,23 @@
+{
+  "pages": {
+    "/dashboard/page": [
+      "static/chunks/c3489_next_dist_d3f44a18._.js",
+      "static/chunks/aasha_src_app_favicon_ico_mjs_5ca57c1d._.js",
+      "static/chunks/[root-of-the-server]__0e96893f._.css",
+      "static/chunks/aasha_src_app_layout_13be7498.js",
+      "static/chunks/c3489_next_dist_client_components_builtin_global-error_bb8a9f48.js",
+      "static/chunks/c3489_35872afc._.js",
+      "static/chunks/aasha_src_app_dashboard_page_jsx_8bb44af2._.js",
+      "static/chunks/aasha_src_app_dashboard_page_jsx_bb8a9f48._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_e347fb9c._.js",
+      "static/chunks/c3489_next_dist_compiled_react-dom_d092d113._.js",
+      "static/chunks/c3489_next_dist_compiled_next-devtools_index_52ebad9c.js",
+      "static/chunks/c3489_next_dist_compiled_c52fb30b._.js",
+      "static/chunks/c3489_next_dist_client_253f40b1._.js",
+      "static/chunks/c3489_next_dist_56339e69._.js",
+      "static/chunks/c3489_@swc_helpers_cjs_f6f282d8._.js",
+      "static/chunks/aasha_a0ff3932._.js",
+      "static/chunks/turbopack-aasha_d0756b61._.js"
+    ]
+  }
+}
