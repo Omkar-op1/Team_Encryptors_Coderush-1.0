@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Globe, Settings, Video } from "lucide-react";
 
+
 export default function Navbar() {
   return (
     <nav className="w-full bg-white shadow-md px-6 py-3 flex items-center justify-between">
