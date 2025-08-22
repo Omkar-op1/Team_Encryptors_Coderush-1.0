@@ -1,0 +1,222 @@
+[
+  {
+    "id": "patient-001",
+    "name": "Ravi Kumar",
+    "age": 45,
+    "conditions": ["Diabetes", "Hypertension"],
+    "last_visit": "2025-07-20",
+    "medications": ["Metformin 500mg", "Amlodipine 5mg"],
+    "lab_reports": [
+      { "test": "Blood Sugar", "value": "150 mg/dL", "date": "2025-07-15" }
+    ]
+  },
+  {
+    "id": "patient-002",
+    "name": "Anita Sharma",
+    "age": 52,
+    "conditions": ["Asthma"],
+    "last_visit": "2025-06-18",
+    "medications": ["Salbutamol Inhaler"],
+    "lab_reports": [
+      { "test": "Lung Function", "value": "Mild Obstruction", "date": "2025-06-15" }
+    ]
+  },
+  {
+    "id": "patient-003",
+    "name": "Vikram Singh",
+    "age": 33,
+    "conditions": ["High Cholesterol"],
+    "last_visit": "2025-05-25",
+    "medications": ["Atorvastatin 10mg"],
+    "lab_reports": [
+      { "test": "Cholesterol", "value": "220 mg/dL", "date": "2025-05-23" }
+    ]
+  },
+  {
+    "id": "patient-004",
+    "name": "Pooja Patel",
+    "age": 28,
+    "conditions": ["Thyroid Disorder"],
+    "last_visit": "2025-04-10",
+    "medications": ["Levothyroxine 50mcg"],
+    "lab_reports": [
+      { "test": "TSH", "value": "6.5 mIU/L", "date": "2025-04-08" }
+    ]
+  },
+  {
+    "id": "patient-005",
+    "name": "Arun Mehta",
+    "age": 60,
+    "conditions": ["Diabetes"],
+    "last_visit": "2025-07-02",
+    "medications": ["Insulin"],
+    "lab_reports": [
+      { "test": "Blood Sugar", "value": "180 mg/dL", "date": "2025-07-01" }
+    ]
+  },
+  {
+    "id": "patient-006",
+    "name": "Neha Verma",
+    "age": 40,
+    "conditions": ["Hypertension"],
+    "last_visit": "2025-06-12",
+    "medications": ["Losartan 50mg"],
+    "lab_reports": [
+      { "test": "BP", "value": "150/95 mmHg", "date": "2025-06-11" }
+    ]
+  },
+  {
+    "id": "patient-007",
+    "name": "Rahul Gupta",
+    "age": 50,
+    "conditions": ["Cardiac Disease"],
+    "last_visit": "2025-05-30",
+    "medications": ["Aspirin 75mg", "Metoprolol 50mg"],
+    "lab_reports": [
+      { "test": "ECG", "value": "Mild abnormality", "date": "2025-05-29" }
+    ]
+  },
+  {
+    "id": "patient-008",
+    "name": "Sneha Reddy",
+    "age": 36,
+    "conditions": ["PCOS"],
+    "last_visit": "2025-07-10",
+    "medications": ["Metformin 500mg"],
+    "lab_reports": [
+      { "test": "Hormonal Panel", "value": "Elevated LH", "date": "2025-07-09" }
+    ]
+  },
+  {
+    "id": "patient-009",
+    "name": "Ajay Yadav",
+    "age": 42,
+    "conditions": ["Back Pain"],
+    "last_visit": "2025-05-15",
+    "medications": ["Ibuprofen"],
+    "lab_reports": [
+      { "test": "X-Ray", "value": "Mild Disc Bulge", "date": "2025-05-14" }
+    ]
+  },
+  {
+    "id": "patient-010",
+    "name": "Kiran Desai",
+    "age": 55,
+    "conditions": ["Arthritis"],
+    "last_visit": "2025-06-25",
+    "medications": ["Diclofenac"],
+    "lab_reports": [
+      { "test": "CRP", "value": "12 mg/L", "date": "2025-06-24" }
+    ]
+  },
+  {
+    "id": "patient-011",
+    "name": "Mohit Jain",
+    "age": 30,
+    "conditions": ["Migraine"],
+    "last_visit": "2025-07-05",
+    "medications": ["Sumatriptan"],
+    "lab_reports": [
+      { "test": "MRI", "value": "Normal", "date": "2025-07-04" }
+    ]
+  },
+  {
+    "id": "patient-012",
+    "name": "Ritika Sharma",
+    "age": 47,
+    "conditions": ["Anemia"],
+    "last_visit": "2025-06-05",
+    "medications": ["Iron Supplements"],
+    "lab_reports": [
+      { "test": "Hemoglobin", "value": "9.5 g/dL", "date": "2025-06-03" }
+    ]
+  },
+  {
+    "id": "patient-013",
+    "name": "Naveen Joshi",
+    "age": 38,
+    "conditions": ["Liver Disorder"],
+    "last_visit": "2025-05-28",
+    "medications": ["Ursodeoxycholic Acid"],
+    "lab_reports": [
+      { "test": "LFT", "value": "Abnormal", "date": "2025-05-27" }
+    ]
+  },
+  {
+    "id": "patient-014",
+    "name": "Shreya Kapoor",
+    "age": 26,
+    "conditions": ["Anxiety"],
+    "last_visit": "2025-07-12",
+    "medications": ["Escitalopram"],
+    "lab_reports": [
+      { "test": "Psych Eval", "value": "Moderate Anxiety", "date": "2025-07-11" }
+    ]
+  },
+  {
+    "id": "patient-015",
+    "name": "Rajesh Nair",
+    "age": 65,
+    "conditions": ["Chronic Kidney Disease"],
+    "last_visit": "2025-06-08",
+    "medications": ["Sevelamer", "Epoetin"],
+    "lab_reports": [
+      { "test": "Creatinine", "value": "2.8 mg/dL", "date": "2025-06-07" }
+    ]
+  },
+  {
+    "id": "patient-016",
+    "name": "Divya Singh",
+    "age": 34,
+    "conditions": ["Pregnancy"],
+    "last_visit": "2025-07-14",
+    "medications": ["Folic Acid"],
+    "lab_reports": [
+      { "test": "Ultrasound", "value": "Normal Fetus", "date": "2025-07-13" }
+    ]
+  },
+  {
+    "id": "patient-017",
+    "name": "Alok Pandey",
+    "age": 48,
+    "conditions": ["Tuberculosis"],
+    "last_visit": "2025-05-12",
+    "medications": ["Rifampicin", "Isoniazid"],
+    "lab_reports": [
+      { "test": "X-Ray", "value": "Lung Lesions", "date": "2025-05-11" }
+    ]
+  },
+  {
+    "id": "patient-018",
+    "name": "Meera Iyer",
+    "age": 44,
+    "conditions": ["Depression"],
+    "last_visit": "2025-06-30",
+    "medications": ["Sertraline"],
+    "lab_reports": [
+      { "test": "Psych Eval", "value": "Severe Depression", "date": "2025-06-29" }
+    ]
+  },
+  {
+    "id": "patient-019",
+    "name": "Suresh Choudhary",
+    "age": 58,
+    "conditions": ["Stroke"],
+    "last_visit": "2025-06-15",
+    "medications": ["Clopidogrel", "Statins"],
+    "lab_reports": [
+      { "test": "MRI", "value": "Minor Stroke", "date": "2025-06-14" }
+    ]
+  },
+  {
+    "id": "patient-020",
+    "name": "Priya Malhotra",
+    "age": 29,
+    "conditions": ["Allergy"],
+    "last_visit": "2025-05-22",
+    "medications": ["Cetirizine"],
+    "lab_reports": [
+      { "test": "Allergy Test", "value": "Dust Allergy", "date": "2025-05-21" }
+    ]
+  }
+]
