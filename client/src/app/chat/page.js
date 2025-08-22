@@ -110,44 +110,56 @@ export default function Chat() {
 
   return (
     <div className="min-h-screen bg-blue-50 flex flex-col">
+      {/* Fixed Navbar */}
       <Navbar />
-      <div className="flex flex-col items-center flex-1 p-6">
-        <h1 className="text-3xl font-bold mb-6 text-blue-800">Chat with Virtual Doctor</h1>
-        <div className="w-full max-w-md flex-1 bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden">
-          <div className="flex-1 p-4 overflow-y-auto space-y-2">
+
+      {/* Main Content */}
+      <div className="flex flex-col items-center flex-1 p-6 pt-28 w-full">
+        {/* Heading */}
+        <h1 className="text-4xl font-bold mb-8 text-blue-800">Chat with Virtual Doctor</h1>
+
+        {/* Chat Container */}
+        <div className="w-full max-w-4xl flex-1 bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden min-h-[600px]">
+          
+          {/* Messages Area */}
+          <div className="flex-1 p-6 overflow-y-auto space-y-4">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`p-2 rounded-lg ${
+                className={`p-4 rounded-xl max-w-[80%] ${
                   msg.sender === "bot"
                     ? "bg-blue-100 text-blue-800 self-start"
-                    : "bg-gray-200 self-end"
+                    : "bg-gray-200 self-end ml-auto"
                 }`}
               >
-                {msg.text}
+                <div className="text-base leading-relaxed">{msg.text}</div>
               </div>
             ))}
           </div>
-          <div className="p-2 border-t flex gap-2">
+
+          {/* Input Area */}
+          <div className="p-4 border-t bg-gray-50 flex gap-3">
             <input
               type="text"
-              className="flex-1 border rounded-lg px-3 py-2"
-              placeholder="Type a message..."
+              className="flex-1 border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Type your message here..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
             <button
               onClick={toggleRecording}
-              className={`px-4 py-2 rounded-lg transition ${
-                isRecording ? "bg-red-600 text-white hover:bg-red-700" : "bg-gray-600 text-white hover:bg-gray-700"
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+                isRecording 
+                  ? "bg-red-600 text-white hover:bg-red-700 shadow-lg" 
+                  : "bg-gray-600 text-white hover:bg-gray-700 shadow-md hover:shadow-lg"
               }`}
             >
-              {isRecording ? "Stop" : "Mic"}
+              {isRecording ? "Stop" : "🎤 Mic"}
             </button>
             <button
               onClick={() => handleSend()}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Send
             </button>
