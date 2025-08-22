@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Globe, Settings, Video } from "lucide-react";
+import { Globe, Settings, Video, UserPlus, LogIn } from "lucide-react";
 
 
 export default function Navbar() {
@@ -43,6 +43,21 @@ export default function Navbar() {
         <button className="flex items-center gap-1 bg-blue-600 text-white rounded-lg px-3 py-1 hover:bg-blue-700 transition">
           <Video className="w-4 h-4" /> Telemedicine
         </button>
+
+        {/* Doctor Login */}
+        <Link href="/login?role=doctor" legacyBehavior>
+          <a className="flex items-center gap-1 border border-gray-300 rounded-lg px-3 py-1 hover:bg-gray-100 transition">
+            <LogIn className="w-4 h-4" /> Doctor Login
+          </a>
+        </Link>
+
+        {/* ASHA Worker Login/Register */}
+        <Link href="/login?role=asha" legacyBehavior>
+          <a className="flex items-center gap-1 bg-green-600 text-white rounded-lg px-3 py-1 hover:bg-green-700 transition">
+            <UserPlus className="w-4 h-4" /> ASHA Login
+          </a>
+        </Link>
+
         <button className="p-2 rounded-full hover:bg-gray-100 transition">
           <Settings className="w-5 h-5 text-gray-600" />
         </button>
