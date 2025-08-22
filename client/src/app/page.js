@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation"; // import router
 import { motion } from "framer-motion";
 import { Stethoscope, Phone, Globe, HeartPulse } from "lucide-react";
 
+
 export default function Home() {
   const router = useRouter();
 
