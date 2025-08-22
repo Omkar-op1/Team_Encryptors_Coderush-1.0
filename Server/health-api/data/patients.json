@@ -1,0 +1,182 @@
+[
+  {
+    "abha_id": "ABHA-1001-0001",
+    "name": "Rahul Sharma",
+    "age": 28,
+    "gender": "Male",
+    "mobile": "9876543210",
+    "address": "Pune, Maharashtra",
+    "medical_history": ["Diabetes Type 2"]
+  },
+  {
+    "abha_id": "ABHA-1001-0002",
+    "name": "Priya Verma",
+    "age": 32,
+    "gender": "Female",
+    "mobile": "9123456780",
+    "address": "Nagpur, Maharashtra",
+    "medical_history": ["Asthma"]
+  },
+  {
+    "abha_id": "ABHA-1001-0003",
+    "name": "Amit Joshi",
+    "age": 45,
+    "gender": "Male",
+    "mobile": "9988776655",
+    "address": "Indore, MP",
+    "medical_history": ["Hypertension"]
+  },
+  {
+    "abha_id": "ABHA-1001-0004",
+    "name": "Sneha Kulkarni",
+    "age": 26,
+    "gender": "Female",
+    "mobile": "9765432109",
+    "address": "Mumbai, Maharashtra",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0005",
+    "name": "Vikas Yadav",
+    "age": 38,
+    "gender": "Male",
+    "mobile": "9832145670",
+    "address": "Lucknow, UP",
+    "medical_history": ["Heart Disease"]
+  },
+  {
+    "abha_id": "ABHA-1001-0006",
+    "name": "Anjali Mehta",
+    "age": 30,
+    "gender": "Female",
+    "mobile": "9012345678",
+    "address": "Surat, Gujarat",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0007",
+    "name": "Rohit Singh",
+    "age": 40,
+    "gender": "Male",
+    "mobile": "9823456789",
+    "address": "Delhi",
+    "medical_history": ["Thyroid"]
+  },
+  {
+    "abha_id": "ABHA-1001-0008",
+    "name": "Neha Gupta",
+    "age": 27,
+    "gender": "Female",
+    "mobile": "9934567890",
+    "address": "Jaipur, Rajasthan",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0009",
+    "name": "Arjun Reddy",
+    "age": 50,
+    "gender": "Male",
+    "mobile": "9123987654",
+    "address": "Hyderabad, Telangana",
+    "medical_history": ["Kidney Stones"]
+  },
+  {
+    "abha_id": "ABHA-1001-0010",
+    "name": "Kavita Patil",
+    "age": 35,
+    "gender": "Female",
+    "mobile": "9801234567",
+    "address": "Kolhapur, Maharashtra",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0011",
+    "name": "Sandeep Nair",
+    "age": 42,
+    "gender": "Male",
+    "mobile": "9754321098",
+    "address": "Kochi, Kerala",
+    "medical_history": ["Arthritis"]
+  },
+  {
+    "abha_id": "ABHA-1001-0012",
+    "name": "Pooja Sharma",
+    "age": 24,
+    "gender": "Female",
+    "mobile": "9976543210",
+    "address": "Bhopal, MP",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0013",
+    "name": "Deepak Chauhan",
+    "age": 31,
+    "gender": "Male",
+    "mobile": "9763412580",
+    "address": "Varanasi, UP",
+    "medical_history": ["Migraine"]
+  },
+  {
+    "abha_id": "ABHA-1001-0014",
+    "name": "Ritu Malhotra",
+    "age": 29,
+    "gender": "Female",
+    "mobile": "9845612300",
+    "address": "Chandigarh",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0015",
+    "name": "Manish Kumar",
+    "age": 36,
+    "gender": "Male",
+    "mobile": "9745612398",
+    "address": "Patna, Bihar",
+    "medical_history": ["Diabetes Type 1"]
+  },
+  {
+    "abha_id": "ABHA-1001-0016",
+    "name": "Ayesha Khan",
+    "age": 33,
+    "gender": "Female",
+    "mobile": "9654781230",
+    "address": "Bangalore, Karnataka",
+    "medical_history": ["Anemia"]
+  },
+  {
+    "abha_id": "ABHA-1001-0017",
+    "name": "Ramesh Pawar",
+    "age": 48,
+    "gender": "Male",
+    "mobile": "9532147890",
+    "address": "Nashik, Maharashtra",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0018",
+    "name": "Divya Iyer",
+    "age": 34,
+    "gender": "Female",
+    "mobile": "9645231789",
+    "address": "Chennai, Tamil Nadu",
+    "medical_history": []
+  },
+  {
+    "abha_id": "ABHA-1001-0019",
+    "name": "Karan Kapoor",
+    "age": 37,
+    "gender": "Male",
+    "mobile": "9890123456",
+    "address": "Amritsar, Punjab",
+    "medical_history": ["Asthma"]
+  },
+  {
+    "abha_id": "ABHA-1001-0020",
+    "name": "Meena Rathi",
+    "age": 41,
+    "gender": "Female",
+    "mobile": "9912345678",
+    "address": "Ahmedabad, Gujarat",
+    "medical_history": []
+  }
+]
