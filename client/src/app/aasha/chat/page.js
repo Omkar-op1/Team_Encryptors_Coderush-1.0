@@ -17,7 +17,12 @@ export default function AashaLogin() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (form.email && form.password) {
-      router.push("/aasha/dashboard"); // redirect after successful login
+      // 🔹 Save user info to localStorage for dashboard
+      localStorage.setItem("userName", form.email); // or any display name
+      localStorage.setItem("profileUrl", "/profile.png"); // replace with actual profile path
+
+      // 🔹 Redirect to dashboard
+      router.push("/aasha/dashboard");
     }
   };
 
@@ -28,7 +33,8 @@ export default function AashaLogin() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-md p-8 bg-white rounded-2xl shadow-2xl">
+        className="w-full max-w-md p-8 bg-white rounded-2xl shadow-2xl"
+      >
         <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
           Aasha Worker Login
         </h1>
@@ -79,7 +85,8 @@ export default function AashaLogin() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition">
+            className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition"
+          >
             <LogIn className="w-5 h-5 mr-2" /> Login
           </motion.button>
         </form>
