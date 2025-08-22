@@ -15,12 +15,7 @@ export default function Home() {
     <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
       {/* Top Header: Sign In / Sign Up */}
       <div className="w-full flex justify-end px-6 py-4">
-        <button
-          onClick={() => router.push("/login")} // or "/register", or decide dynamically
-          className="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
-        >
-          Login / Register
-        </button>
+        <button onClick={() => router.push("/aasha/chat")}>Login / Chat</button>
       </div>
 
       {/* Hero Section */}
