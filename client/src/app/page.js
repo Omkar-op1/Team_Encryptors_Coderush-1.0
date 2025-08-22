@@ -1,8 +1,16 @@
 "use client";
+import { useRouter } from "next/navigation"; // import router
 import { motion } from "framer-motion";
 import { Stethoscope, Phone, Globe, HeartPulse } from "lucide-react";
 
+
 export default function Home() {
+  const router = useRouter();
+
+  const handleGetStarted = () => {
+    router.push("/chat"); // redirects to pages/chat.js
+  };
+
   return (
     <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
       {/* Hero Section */}
@@ -30,7 +38,10 @@ export default function Home() {
           transition={{ delay: 0.6 }}
           className="mt-8 flex gap-4"
         >
-          <button className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition">
+          <button
+            onClick={handleGetStarted}
+            className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition"
+          >
             Get Started
           </button>
           <button className="px-6 py-3 rounded-2xl bg-white border border-gray-300 text-gray-700 font-semibold shadow-md hover:bg-gray-100 transition">
@@ -68,7 +79,10 @@ export default function Home() {
         <p className="mt-4 text-lg max-w-2xl mx-auto">
           Get access to healthcare without traveling long distances. Start your virtual consultation today.
         </p>
-        <button className="mt-8 px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl shadow-lg hover:bg-gray-100 transition">
+        <button
+          onClick={handleGetStarted}
+          className="mt-8 px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl shadow-lg hover:bg-gray-100 transition"
+        >
           Start Consultation
         </button>
       </section>
