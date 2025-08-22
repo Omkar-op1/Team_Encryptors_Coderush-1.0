@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation"; // import router
 import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 import { Stethoscope, Phone, Globe, HeartPulse } from "lucide-react";
 
 

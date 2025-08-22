@@ -10,10 +10,11 @@ export default function Chat() {
   const [input, setInput] = useState("");
   const [listening, setListening] = useState(false);
 
+  // ✅ Send message
   const handleSend = (text = input) => {
     if (!text.trim()) return;
 
-    setMessages([...messages, { sender: "user", text }]);
+    setMessages((prev) => [...prev, { sender: "user", text }]);
     setInput("");
 
     setTimeout(() => {
@@ -24,9 +25,11 @@ export default function Chat() {
     }, 1000);
   };
 
+  // ✅ Mic recording handler
   const handleMicClick = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
+
     if (!SpeechRecognition) {
       alert("Your browser does not support Speech Recognition.");
       return;
@@ -36,6 +39,7 @@ export default function Chat() {
     recognition.lang = "en-US";
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
+    recognition.continuous = false; // 🎤 set to true for continuous recording
 
     recognition.onstart = () => setListening(true);
     recognition.onend = () => setListening(false);
@@ -43,6 +47,11 @@ export default function Chat() {
     recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript;
       handleSend(transcript);
+    };
+
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error:", event.error);
+      setListening(false);
     };
 
     recognition.start();
@@ -57,12 +66,15 @@ export default function Chat() {
         <h1 className="text-3xl font-bold mb-6 text-blue-800">
           Chat with Virtual Doctor
         </h1>
+
+        {/* Chat box */}
         <div className="w-full max-w-md flex-1 bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden">
+          {/* Messages */}
           <div className="flex-1 p-4 overflow-y-auto space-y-2">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`p-2 rounded-lg ${
+                className={`p-2 rounded-lg max-w-[80%] ${
                   msg.sender === "bot"
                     ? "bg-blue-100 text-blue-800 self-start"
                     : "bg-gray-200 self-end"
@@ -72,6 +84,8 @@ export default function Chat() {
               </div>
             ))}
           </div>
+
+          {/* Input + Buttons */}
           <div className="p-2 border-t flex gap-2 items-center">
             <input
               type="text"
@@ -81,6 +95,7 @@ export default function Chat() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
+
             {/* ✅ Mic button */}
             <button
               onClick={handleMicClick}
@@ -90,6 +105,7 @@ export default function Chat() {
             >
               <Mic size={20} />
             </button>
+
             {/* ✅ Send button */}
             <button
               onClick={() => handleSend()}
