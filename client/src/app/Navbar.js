@@ -36,12 +36,20 @@ export default function Navbar() {
 
       {/* Right: Controls */}
       <div className="flex items-center space-x-4">
+        {/* Language */}
         <button className="flex items-center gap-1 border border-gray-300 rounded-lg px-3 py-1 hover:bg-gray-100 transition">
           <Globe className="w-4 h-4" /> English
         </button>
-        <button className="flex items-center gap-1 bg-blue-600 text-white rounded-lg px-3 py-1 hover:bg-blue-700 transition">
+
+        {/* Telemedicine -> redirects to /telemedicine */}
+        <Link
+          href="/telemedicine"
+          className="flex items-center gap-1 bg-blue-600 text-white rounded-lg px-3 py-1 hover:bg-blue-700 transition"
+        >
           <Video className="w-4 h-4" /> Telemedicine
-        </button>
+        </Link>
+
+        {/* Settings */}
         <button className="p-2 rounded-full hover:bg-gray-100 transition">
           <Settings className="w-5 h-5 text-gray-600" />
         </button>

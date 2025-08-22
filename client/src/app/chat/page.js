@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import { Mic, MicOff } from "lucide-react";
 import Navbar from "../Navbar";
 
 export default function Chat() {
@@ -126,13 +127,19 @@ export default function Chat() {
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`p-4 rounded-xl max-w-[80%] ${
-                  msg.sender === "bot"
-                    ? "bg-blue-100 text-blue-800 self-start"
-                    : "bg-gray-200 self-end ml-auto"
+                className={`flex w-full ${
+                  msg.sender === "user" ? "justify-end" : "justify-start"
                 }`}
               >
-                <div className="text-base leading-relaxed">{msg.text}</div>
+                <div
+                  className={`p-4 rounded-xl max-w-[80%] break-words ${
+                    msg.sender === "bot"
+                      ? "bg-blue-100 text-blue-800 rounded-tl-sm"
+                      : "bg-green-500 text-white rounded-tr-sm"
+                  }`}
+                >
+                  <div className="text-base leading-relaxed">{msg.text}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -149,13 +156,14 @@ export default function Chat() {
             />
             <button
               onClick={toggleRecording}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 flex items-center gap-2 ${
                 isRecording 
                   ? "bg-red-600 text-white hover:bg-red-700 shadow-lg" 
                   : "bg-gray-600 text-white hover:bg-gray-700 shadow-md hover:shadow-lg"
               }`}
             >
-              {isRecording ? "Stop" : "🎤 Mic"}
+              {isRecording ? <MicOff size={20} /> : <Mic size={20} />}
+              {isRecording ? "Stop" : "Mic"}
             </button>
             <button
               onClick={() => handleSend()}
