@@ -1,7 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
-const app = express();
+const router = express.Router();  // <- app ki jagah router
+
+
 
 // ✅ JSON data load
 const patients = JSON.parse(
@@ -9,15 +11,13 @@ const patients = JSON.parse(
 );
 
 // ✅ Route for fetching patient by ABHA ID
-app.get("/patients", (req, res) => {
+router.get("/patients", (req, res) => {
   const abhaId = req.query.abhaId; // URL me ?abhaId=... se milega
 
-  // Agar ABHA ID missing hai
   if (!abhaId) {
     return res.status(400).json({ message: "❌ Please provide ABHA ID" });
   }
 
-  // JSON file me 'abha_id' key ka use
   const patient = patients.find((p) => p.abha_id === abhaId);
 
   if (!patient) {
@@ -27,7 +27,4 @@ app.get("/patients", (req, res) => {
   res.json(patient);
 });
 
-// ✅ Server listen
-app.listen(5000, () =>
-  console.log("✅ Server running on http://localhost:5000")
-);
+module.exports = router;   // <- router export karo
