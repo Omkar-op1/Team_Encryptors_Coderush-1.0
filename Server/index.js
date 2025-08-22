@@ -2,32 +2,40 @@ import express from "express";
 import multer from "multer";
 import axios from "axios";
 import fs from "fs";
+import healthApi from "./health-api/server.js"; // ✅ ES module style import
 
 const app = express();
+app.use(express.json());
+
 const upload = multer({ dest: "uploads/" });
 
-// Hugging Face API Key
+// ✅ mount health API
+app.use("/health", healthApi);
+
+// ✅ root route
+app.get("/", (req, res) => {
+  res.send("Main Server Running...");
+});
+
+// ✅ transcription route
 const HF_API_KEY = "YOUR_HF_API_KEY"; // 🔑 put your token here
 
-// Route to upload audio & get transcription
 app.post("/transcribe", upload.single("audio"), async (req, res) => {
   try {
     const audioFilePath = req.file.path;
 
-    // Send file to Hugging Face Inference API
     const response = await axios({
       method: "post",
       url: "https://api-inference.huggingface.co/models/openai/whisper-small",
       headers: {
         Authorization: `Bearer ${HF_API_KEY}`,
-        "Content-Type": "audio/wav", // change if mp3
+        "Content-Type": req.file.mimetype, // dynamic (wav, mp3, etc.)
       },
       data: fs.readFileSync(audioFilePath),
+      timeout: 60000,
     });
 
-    // Delete file after processing
-    fs.unlinkSync(audioFilePath);
-
+    fs.unlinkSync(audioFilePath); // cleanup
     res.json(response.data);
   } catch (error) {
     console.error(error.response?.data || error.message);
@@ -35,4 +43,8 @@ app.post("/transcribe", upload.single("audio"), async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("🚀 Server running on http://localhost:3000"));
+// ✅ single server listen
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
